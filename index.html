@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link type="text/css" href="style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="/favicon.png" />
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<div class="TopArea">
+		<!-- This version of the logo is shown when the display is for phones -->
+		<!-- You can add your logo inside this div. -->
+		<div class="LogoMobile"></div>
+		<div class="TopAreaLinks" id="TopAreaLinks"></div>
+	</div>
+	<div class="Main-Content-Area">
+		<div id="draw"></div>
+	</div>
+	<script src="js/marked.min.js"></script>
+	<script src="js/js-yaml.js"></script>
+	<script src="js/yamlFront.js"></script>
+	<script src="js/functions.js?1"></script>
+	<script>
+		GenSharedTopItems()
+		CreateBlogListing()
+	</script>
+</body>
+</html>

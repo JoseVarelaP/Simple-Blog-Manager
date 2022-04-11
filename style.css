@@ -1,0 +1,166 @@
+/* Shared background. */
+body { background-color: black; }
+
+:root{
+	font-family: sans-serif;
+	--highlight-off: #777;
+	--highlight-on: white;
+}
+
+#backbutton { width: 1.5em; }
+
+.BlogList{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items:center;		
+}
+
+.imageroll {
+	display: flex;
+	flex-direction: row;
+	overflow:auto;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.Main-Content-Area img { 
+	max-width: 500px;
+}
+.Main-Content-Area video { 
+	max-width: 50%;
+}
+
+.imageroll img, .imageroll video {
+	width: 90% !important;
+	max-width: fit-content;
+}
+
+text {
+	color: var(--highlight-on);
+}
+
+/* Begin Top area elements */
+.TopArea {
+	height: 68px;
+	font-size: 1.5em;
+}
+
+.TopArea img{ height: 38px; }
+
+.LogoMobile {
+	display: none;
+	justify-content:space-evenly;
+}
+
+.TopAreaLinks {
+	display: flex;
+	justify-content:space-evenly;
+	flex-shrink: 0;
+	align-self: flex-start;
+}
+
+.TopAreaLinks a{
+	color: var(--highlight-off);
+	transition: color 0.2s;
+	text-decoration: none;
+}
+
+/* Begin body */
+.Main-Content-Area {
+	width: 70%;
+	margin: auto;
+	font-size: 1.25em;
+}
+
+a{
+	text-decoration:underline;
+	color: #fa0;
+	transition: color 0.2s;
+	line-height: 1.5em;
+}
+
+NO INVERT
+a
+
+li {
+	line-height: 1.5em;
+}
+
+a:hover{ color: var(--highlight-on); }
+
+p {
+	text-align: justify;
+	color:white;
+	line-height: 1.5em;
+}
+
+center, li {
+	color: var(--highlight-on);
+}
+
+.note p {
+	line-height: 1em;
+	flex-grow: 2;
+	margin: 0px 10px;
+}
+
+.timedate{
+	color:white;
+	margin: -28px 0px 10px 0px;
+}
+
+details {
+	border: 2px solid #fff;
+	padding: 8px;
+	color: white;
+	border-radius: 8px;
+}
+
+.note{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border: 2px solid #7cc;
+	padding: 8px;
+	color: white;
+	border-radius: 8px;
+}
+
+.note .info{
+	width: 20px;
+	flex-basis: 34px;
+}
+
+summary, .note summary { 
+	color: var(--highlight-on);
+	cursor: pointer;
+}
+
+/* Elements for the blog. */
+h1,h2,h3,h4,h5{
+	color: var(--highlight-on);
+	font-size: 1.5em;
+}
+
+h2 {
+	cursor:pointer;
+}
+
+/* Time to check for mobile devices n stuff. */
+@media only screen and (device-width: 1000px),
+only screen and (max-width:1000px) {
+	/*.TopArea{ display: none; }*/
+	#logo{ display: none; }
+	.LogoMobile { display: flex; }
+	.TopArea { height: 120px; }
+	.Main-Content-Area{
+		width: 95%;
+	}
+	.Main-Content-Area img, .Main-Content-Area video { 
+		max-width: 100%;
+	}
+	.imageroll {
+		flex-direction: column;
+	}
+}
