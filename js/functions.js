@@ -1,7 +1,6 @@
 /**
  * Creates the top area, in which includes the following:
  * - The logo which will return back to the homepage.
- * - The Zenth redirect to point to the bandcamp page.
  * - The links to include as a clickable subpage area.
  * @param {object} Links The list of links to display.
  */
@@ -44,12 +43,7 @@
  */
 const GenSharedTopItems = () =>
 {
-	/**
-	  * TODO: Have a way to make the current site generate a #.
-	  * */ 
- 
 	const PagePath = window.location.pathname.substring(1, window.location.pathname.lastIndexOf("/") )
-	// console.log( PagePath )
 	const Links = {
 		"Link container for other pages!": "#",
 		"Some other link here!": "#",
@@ -58,7 +52,6 @@ const GenSharedTopItems = () =>
 	if( PagePath.length > 1 )
 		for( const L in Links )
 		{
-			// console.log( PagePath + " . " + Links[L] )
 			if(PagePath === Links[L])
 				Links[L] = "#"
 		}
